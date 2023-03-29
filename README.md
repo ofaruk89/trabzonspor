@@ -1,6 +1,6 @@
 # Trabzonspor
 
-TS CLI! Aq biraz kosun!
+TS CLI
 
 ## Installation
 
