@@ -20,11 +20,11 @@ class Scraper:
 
     @property
     def matches(self):
-        return self.session.get("https://www.transfermarkt.com.tr/ceapi/nextMatches/team/114").json()
+        return self.session.get("https://www.transfermarkt.com.tr/ceapi/nextMatches/team/449").json()
 
     @property
     def rumors(self):
-        return self.session.get("https://www.transfermarkt.com.tr/ceapi/rumors/team/114").json()["rumors"]
+        return self.session.get("https://www.transfermarkt.com.tr/ceapi/rumors/team/449").json()["rumors"]
 
     @property
     def team_value(self):

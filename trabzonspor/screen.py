@@ -59,8 +59,9 @@ class Application:
     @staticmethod
     def get_header_middle():
         logo = Group(
-            Align.center("[black]Besik[/black][white]tas[/white]\n"),
-            Align.center("1905"),
+            Align.center("[dark_red]Trabzon[/dark_red][dodger_blue1]spor[/dodger_blue1]\n"),
+            Align.center("1967"),
+
         )
         return Panel(Align.center(logo, vertical="middle"), style="bold", padding=1)
 
@@ -156,7 +157,7 @@ class Application:
         table.add_column()
         table.add_column()
         table.add_row("quit", ": ", "CTRL + C")
-        table.add_row("credit", ": ", Text("@osmanuygar", style="link https://github.com/osmanuygar"))
+        table.add_row("credit", ": ", Text("@ofaruk89", style="link https://github.com/ofaruk89"))
         return Panel(table, box=box.HORIZONTALS)
 
 
@@ -185,7 +186,7 @@ class Footballers:
         table.add_column()
         table.add_column()
         table.add_row("quit", ": ", "CTRL + C")
-        table.add_row("credit", ": ", Text("@osmanuygar", style="link https://github.com/osmanuygar"))
+        table.add_row("credit", ": ", Text("@ofaruk89", style="link https://github.com/ofaruk89"))
         return Panel(table, box=box.HORIZONTALS)
 
     def get_main(self):
@@ -198,7 +199,7 @@ class Footballers:
         for i in range(0, len(self.scrapper.players["Player"]),1):
             standings.add_row(self.scrapper.players["Player"][i], self.scrapper.players["Age"][i]
                               , self.scrapper.players["Position"][i],self.scrapper.players["Market Value"][i])
-        return Panel(standings, title="[cyan][b]Besiktas Squad[/b][/cyan]", box=box.SQUARE)
+        return Panel(standings, title="[cyan][b]Trabzonspor Squad[/b][/cyan]", box=box.SQUARE)
 
 
 class Stats:
@@ -252,5 +253,5 @@ class Stats:
         table.add_column()
         table.add_column()
         table.add_row("quit", ": ", "CTRL + C")
-        table.add_row("credit", ": ", Text("@osmanuygar", style="link https://github.com/osmanuygar"))
+        table.add_row("credit", ": ", Text("@ofaruk89", style="link https://github.com/ofaruk89"))
         return Panel(table, box=box.HORIZONTALS)

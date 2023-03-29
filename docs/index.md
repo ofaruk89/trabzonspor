@@ -1,28 +1,28 @@
-# Besiktas
+# Trabzonspor
 
-Besiktas CLI!
+Trabzonspor CLI!
 
 ## Installation
 
 ```shell
-$ pip install besiktas
+$ pip install trabzonspor
 ```
 
 ## Usage
 Main Page
 ```
-$ besiktas
+$ trabzonspor
 ```
 ![](main.png)
 
 List of Players
 ```
-$ besiktas -kadro
+$ trabzonspor -kadro
 ```
 ![](kadro.png)
 
 List of Top Scorers
 ```
-$ besiktas -stats
+$ trabzonspor -stats
 ```
 ![](stats.png)
