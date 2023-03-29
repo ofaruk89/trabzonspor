@@ -1,10 +1,10 @@
-from besiktas.screen import Application, Footballers, Stats
+from trabzonspor.screen import Application, Footballers, Stats
 import argparse
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Besiktas ClI')
-    parser.add_argument('-kadro', action='store_true',help='Besiktas Squad')
+    parser = argparse.ArgumentParser(description='Trabzonspor ClI')
+    parser.add_argument('-kadro', action='store_true',help='Trabzonspor Squad')
     parser.add_argument('-stats', action='store_true',help='Top Scorers')
     args = parser.parse_args()
     if args.kadro is False and args.stats is False:
