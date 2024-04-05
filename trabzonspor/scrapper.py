@@ -7,8 +7,16 @@ class Scraper:
         self.session = requests.Session()
         self.session.headers.update(
             {
-                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) "
-                              "Chrome/39.0.2171.95 Safari/537.36 "
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6)"
+                    " AppleWebKit/537.36 (KHTML, like Gecko)"
+                    " Chrome/53.0.2785.143 Safari/537.36"
+                ),
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "DNT": "1",
+                "Connection": "keep-alive",
+                "Upgrade-Insecure-Requests": "1"
             }
         )
 

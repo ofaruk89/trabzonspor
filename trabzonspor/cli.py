@@ -3,8 +3,8 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Trabzonspor ClI')
-    parser.add_argument('--kadro', action='store_true', help='Trabzonspor Squad')
-    parser.add_argument('--stats', action='store_true', help='Top Scorers')
+    parser.add_argument('-kadro', action='store_true', help='Trabzonspor Squad')
+    parser.add_argument('-stats', action='store_true', help='Top Scorers')
     args = parser.parse_args()
     if args.kadro is False and args.stats is False:
         try:
