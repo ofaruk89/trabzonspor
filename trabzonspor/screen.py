@@ -59,9 +59,9 @@ class Application:
     @staticmethod
     def get_header_middle():
         logo = Group(
-            Align.center("[dark_red]Trabzon[/dark_red][dodger_blue1]spor[/dodger_blue1]\n"),
+            Align.center(":star:\n"),
+            Align.center("[dark_red]TRABZON[/dark_red][dodger_blue1]SPOR[/dodger_blue1]\n"),
             Align.center("1967"),
-
         )
         return Panel(Align.center(logo, vertical="middle"), style="bold", padding=1)
 
@@ -77,7 +77,7 @@ class Application:
         standings.add_column(header="Puan")
 
         for no, club, matches, average, points, highlight in self.scrapper.standings:
-            style = "u red on white" if highlight else None
+            style = "u dodger_blue1 on dark_red" if highlight else None
             standings.add_row(no, club, matches, average, points, style=style)
         return Panel(standings, title="[cyan][b]TABLO KESİTİ SÜPER LİG[/b][/cyan]", box=box.SQUARE)
 

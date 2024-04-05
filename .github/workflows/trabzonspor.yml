@@ -1,0 +1,34 @@
+name: trabzonspor
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install poetry && poetry install
+
+      - name: Publish site to the GitHub pages
+        run: poetry run portray on_github_pages --force
+
+      - name: Publish to PyPI
+        shell: bash
+        run: |
+          poetry build
+          poetry config pypi-token.pypi $PYPI_TOKEN
+          poetry publish --dry-run
+          poetry publish
+          echo "Published to PyPI"
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
