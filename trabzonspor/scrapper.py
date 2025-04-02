@@ -55,7 +55,7 @@ class Scraper:
     @property
     def standings(self):
         standings = []
-        table = self.soup.find("div", attrs={"data-viewport": "Tabelle"})
+        table = self.soup.find_all(lambda tag: tag.name == "div" and tag.get("class") == ["box"])[1]
         for each in table.select("tbody tr"):
             n, _, c, m, a, p = each.select("td")
             row = [
@@ -72,7 +72,7 @@ class Scraper:
 
     @property
     def truths(self):
-        table = self.soup.find("div", attrs={"data-viewport": "Daten_und_Fakten"})
+        table = self.soup.find("div", class_="box daten-und-fakten-verein")
         truths = {
             "legal_name": table.find("span", attrs={"itemprop": "legalName"}).get_text(strip=True),
             "address": " ".join([i.get_text(strip=True) for i in table.find_all("div", attrs={"itemprop": "address"})]),

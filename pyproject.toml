@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "trabzonspor"
-version = "0.6.61"
+version = "0.7.61"
 description = "trabzonspor cli!"
 authors = ["Omer Faruk GUL <ofaruk89@gmail.com>"]
 license = "MIT"
